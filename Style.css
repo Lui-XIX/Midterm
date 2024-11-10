@@ -1,0 +1,264 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Body and Layout Styling */
+body {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background: #ffffff;
+  color: #000000;
+  background-image: url('one.jpg');
+  background-size: cover; /* Adjusts the image to cover the entire screen */
+  background-position: center; /* Centers the background image */
+  background-repeat: no-repeat; /* Prevents the image from repeating */
+}
+
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 20px;
+  margin: auto;
+  width: 90%;
+  max-width: 1200px;
+}
+
+/* Two-column layout using Flexbox */
+.column {
+  align-self: center;
+  padding: 20px;
+  border-radius: 12px;
+  background-color: #ffffff;
+  box-shadow: 0 4px 12px #6f4e37;
+  border: 2px solid #333; /* Border around the column */
+  margin: 0 auto; /* Center the column horizontally */
+}
+.column.left {
+  background-color: #ffffff;
+  flex: 0 0 30%; /* 30% width for left column */
+}
+
+.column.right {
+  background-color: #ffffff;
+  flex: 0 0 70%; /* 70% width for right column */
+}
+
+@media (max-width: 768px) {
+  .left-column, .right-column {
+      flex: 0 0 100%; /* Stack the columns vertically on small screens */
+  }
+}
+
+/* Header and Footer Styling */
+header, footer {
+  background-color: #6f4e37;
+  color: rgb(255, 255, 255);
+  text-align: center;
+  padding: 1.2rem 0;
+  font-size: 23px;
+}
+
+header img {
+  width: 100px;
+  height: auto;
+}
+
+nav a {
+  color: white;
+  margin: 21px;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+footer p {
+  font-size: 16px;
+}
+
+/* Typography Styling */
+.title, h2 {
+  color: #000000;
+  font-weight: 700;
+}
+
+h1.tite {
+  text-align: right;
+  font-size: 23px;
+  margin-bottom: 18px;
+}
+
+h2 {
+  font-size: 21px;
+  margin-bottom: 20px;
+}
+
+.description, p {
+  font-size: 14px;
+  color: darkgray;
+  line-height: 1.6;
+}
+
+ul {
+  list-style-position: inside; /* Ensure the bullets align with the text */
+  padding-left: 0; /* Remove the default left padding */
+  display: flex;
+  justify-content: center; /* Center the list items horizontally */
+  flex-direction: column; /* Ensure the list items stack vertically */
+}
+
+/* Style the list items inside .service-list with different colors, fonts, and padding */
+ul.service-list li:nth-child(1) {
+  color: #FF5733; /* Red color */
+  font-family: 'Arial', sans-serif; /* Font for the first item */
+  padding: 10px 0; /* Padding for the first item */
+}
+
+ul.service-list li:nth-child(2) {
+  color: #33FF57; /* Green color */
+  font-family: 'Verdana', sans-serif; /* Font for the second item */
+  padding: 12px 0; /* Padding for the second item */
+}
+
+ul.service-list li:nth-child(3) {
+  color: #3357FF; /* Blue color */
+  font-family: 'Courier New', monospace; /* Font for the third item */
+  padding: 14px 0; /* Padding for the third item */
+}
+
+/* List Styling */
+.service-list li {
+  font-family: Arial, sans-serif, impact,'Times New Roman';
+  list-style: none;
+  color: #333;
+  padding: 10px 0; /* Add padding */
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.service-list li:hover {
+  background-color: lightgray;
+  border-radius: 4px;
+}
+
+/* Form Styling */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+fieldset {
+  border: 1px solid #000000;
+  padding: 15px;
+  border-radius: 10px;
+}
+
+label {
+  font-weight: 600;
+  color: #000000;
+}
+
+input, select, button {
+  padding: 12px;
+  border: 1px solid lightgray;
+  border-radius: 8px;
+  font-size: 1rem;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+input:focus, select:focus {
+  border-color: #4a4e69;
+}
+
+button {
+  cursor: pointer;
+  background-color: #6F4E37;
+  color: white;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: lightgray;
+}
+
+/* Sidebar Styling */
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: -250px;
+  width: 250px;
+  height: 100%;
+  background-color: #6F4E37;
+  color: white;
+  transition: left 0.3s ease-in-out;
+  padding-top: 20px;
+  z-index: 1000;
+  box-shadow: 2px 0px 8px rgba(0, 0, 0, 0.5);
+}
+
+.sidebar.active {
+  left: 0;
+}
+
+.sidebar h1 {
+  text-align: center;
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+}
+
+.sidebar nav ul {
+  list-style: none;
+  padding: 0;
+}
+
+.sidebar nav ul li {
+  padding: 15px 20px;
+  border-bottom: 1px solid #6F4E37;
+}
+
+.sidebar nav ul li a {
+  text-decoration: none;
+  color: white;
+  font-weight: 600;
+  display: block;
+  transition: background-color 0.3s;
+}
+
+.sidebar nav ul li a:hover {
+  background-color: #ffffff;
+}
+
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: none;
+  border: none;
+  font-size: 24px;
+  color: white;
+  cursor: pointer;
+}
+
+/* Sidebar Toggle Button */
+.sidebar-toggle {
+  font-size: 30px;
+  color: white;
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  background-color: #6F4E37;
+  padding: 10px;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 999;
+}

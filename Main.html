@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>De taza Midterm</title>
+    <link rel="stylesheet" href="Style.css">
+</head>
+<body>
+    <header>
+        <img src="one.png" alt="Logo" id="logo">
+    </header>
+
+    <!-- Sidebar Toggle Button -->
+    <button class="sidebar-toggle" onclick="toggleSidebar()">&#9776;</button>
+
+    <!-- Sidebar -->
+    <div class="sidebar" id="sidebar">
+        <button class="close-btn" onclick="toggleSidebar()">&#10005;</button>
+        <h1>Others</h1>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <main class="container">
+        <section class="column right">
+            <h1 class="title">Welcome to Our Website</h1>
+            <p class="description">This is a sample description text.</p>
+            <ul class="service-list">
+                <li>Web Design</li>
+                <li>Web Development</li>
+                <li>SEO Services</li>
+            </ul>
+        </section>
+
+        <section class="column left">
+            <h2>Introduction</h2>
+            <p>Welcome to Coffee co., where every cup tells a story. Located in the heart of mandaluyong, our café is dedicated to crafting the perfect brew and creating a cozy, inviting atmosphere. We pride ourselves on sourcing high-quality beans and working with local roasters to bring you rich, unique flavors. Whether you're here to start your morning, meet friends, or just take a break from your day, we are here to make your coffee experience unforgettable.</p>
+        </section>
+
+        <section class="column left">
+            <h2>Our Services</h2>
+            <ul style="text-align: center;">
+                <li>Custom Web Design</li>
+                <li>Development Solutions</li>
+                <li>Search Engine Optimization</li>
+            </ul>
+        </section>
+
+        <section class="column right">
+            <h2>Registration Form</h2>
+            <form id="registrationForm">
+                <fieldset>
+                    <legend>Personal Information</legend>
+                    <label for="firstName">First Name:</label>
+                    <input type="text" id="firstName" name="firstName" required>
+
+                    <label for="lastName">Last Name:</label>
+                    <input type="text" id="lastName" name="lastName" required>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Account Information</legend>
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+
+                    <label for="password">Password:</label>
+                    <input type="password" id="password" name="password" placeholder="Enter password" required>
+                    <br>
+                    <label for="dob">Date of Birth:</label>
+                    <input type="date" id="dob" name="dob" required>
+
+                    <label for="country">Country:</label>
+                    <select id="country" name="country" required>
+                        <option value="USA">USA</option>
+                        <option value="Canada">Canada</option>
+                        <option value="UK">UK</option>
+                    </select>
+                </fieldset>
+
+                <button type="submit">Sign Up</button>
+                <p id="errorMessage"></p>
+            </form>
+        </section>
+
+        <section class="column left">
+            <button id="Button">Click Me</button>
+            <p id="my">This is a paragraph.</p>
+        </section>
+
+        <section class="column left">
+            <h2>Fruits List</h2>
+            <ul id="fruitList"></ul>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; <span id="year"></span> Coffee Co. All rights reserved.</p>
+    </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
