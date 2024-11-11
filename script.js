@@ -27,7 +27,7 @@
         };
 
         // Array Output in List
-        const fruits = ["apple", "banana", "mango", "grape"];
+        const fruits = ["Apple", "Banana", "Mango", "Grape"];
         const fruitList = document.getElementById("fruitList");
         fruits.forEach(fruit => {
             const li = document.createElement("li");
